@@ -112,6 +112,30 @@ body > div:nth-of-type(2) > div {
   background-color: white;
 }
 
+/* free delivery container  */
+#cart-item-container > div:first-of-type {
+  display: flex;
+  border-radius: 5px;
+  background-color: rgb(252, 255, 238);
+  align-items: center;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+
+/* free delevery icon */
+.truck {
+  width: 19px;
+  height: 12px;
+  animation-duration: 2s;
+  margin-right: 5px;
+}
+
+.truck + p {
+  font-size: 15px;
+  color: black;
+  font-family: sans-serif;
+}
+
 @media only screen and (max-width: 400px) {
   body > div:nth-of-type(2) > div {
     display: block;
