@@ -1,0 +1,119 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* NavBar */
+body > div:nth-of-type(1) {
+  display: flex;
+  background-color: #fff;
+  height: 56px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* NavBar image */
+body > div > img {
+  height: 30px;
+  padding: 2px;
+  padding-left: 10%;
+}
+
+/* Main thing container  */
+body > div:nth-of-type(2) {
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+/* header My bag text  */
+body > div:nth-of-type(2) > p {
+  font-size: 17px;
+  font-family: sans-serif;
+  color: #181818;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+
+/* header My bag text */
+/* body > div:nth-of-type(2) > p > span {
+} */
+
+/* outer of cart items and price and coupon */
+body > div:nth-of-type(2) > div {
+  display: flex;
+}
+
+/* each card style for cart, where the product details are going to be shown  */
+.child {
+  display: flex;
+  padding: 2.5%;
+  justify-content: flex-start;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+}
+
+/* title style for the product */
+.child > div > p:first-child {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* title on hover */
+.child > div > p:first-child:hover {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* price overall p styles */
+.child > div > p:nth-child(2) {
+  margin-bottom: 12px;
+}
+
+/* price style for the cart, discounted price  */
+.child > div > p:nth-child(2) > span:nth-child(1) {
+  color: rgb(51, 51, 51);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* price style for the cart, original line through  */
+.child > div > p:nth-child(2) > span:nth-child(2) {
+  color: rgb(94, 99, 107);
+  font-size: 17px;
+  text-decoration: 1px solid rgb(94, 99, 107) line-through;
+  margin-left: 5px;
+}
+
+/* you saved *** price discount saved tag */
+.child > div > p:nth-child(3) {
+  color: rgb(50, 140, 91);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* cart product image holder */
+.child > div:last-of-type {
+  margin-left: 40px;
+}
+
+/* cart product image  */
+.child > div:last-of-type > img {
+  width: 100%;
+  border-radius: 5px;
+  height: 200px;
+}
+
+/* size and qty buttons */
+.child > div > div > button {
+  background-color: white;
+}
+
+@media only screen and (max-width: 400px) {
+  body > div:nth-of-type(2) > div {
+    display: block;
+  }
+}
