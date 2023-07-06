@@ -19,8 +19,8 @@
         <img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="bewakoof log">
     </div>
 
-    <!-- Main Container -->
-    <div>
+    <!-- Main Cart Container -->
+    <div id="main_cart_container">
         <p><b>My Bag </b><span>1 item</span></p>
         <!-- Cart items, price and coupon section  -->
         <div>
@@ -136,6 +136,25 @@
 
         </div>
     </div>
+
+    <!-- modals section  -->
+    <div id="coupon_modal">
+        <div class="coupon_model_container">
+            <p class="coupon_title_apply_box">Apply Coupon / Gift Card</p>
+            <form id="coupon-form">
+                <input type="text" id="cpn_code" placeholder="ENTER CODE" />
+                <div id="error_coupon_holder"><span id="error-text">Invalid
+                        Code</span></div>
+                <button id="coupon_apply_button">APPLY</button>
+        </div>
+    </div>
+
+    <footer style="position: fixed;bottom: 0;width: 100%;">
+        <div style="margin-top: 0px; text-align: center; background: rgb(251, 251, 251);">
+            <img src="https://images.bewakoof.com/web/secure-payments-image.png" alt="some_payment_images"
+                style="max-width: 257px;width: 100%;margin: 10px auto;" />
+        </div>
+    </footer>
 
     <!-- script file here -->
     <script src="./scripts/cartJS.js"></script>

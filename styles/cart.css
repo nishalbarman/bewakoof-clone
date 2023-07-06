@@ -1,7 +1,17 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "montserrat-semibold";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
 * {
   margin: 0px;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "montserrat";
 }
 
 /* NavBar */
@@ -30,7 +40,6 @@ body > div:nth-of-type(2) {
 /* header My bag text  */
 body > div:nth-of-type(2) > p {
   font-size: 17px;
-  font-family: sans-serif;
   color: #181818;
   padding-left: 5px;
   margin-bottom: 30px;
@@ -140,7 +149,7 @@ body > div:nth-of-type(2) > div {
 .truck + p {
   font-size: 15px;
   color: black;
-  font-family: sans-serif;
+  font-family: montserrat;
 }
 
 .qp {
@@ -152,7 +161,7 @@ body > div:nth-of-type(2) > div {
 
 .qp > div {
   margin-right: 16px;
-  font-family: sans-serif;
+  font-family: montserrat;
   cursor: pointer;
   padding: 8px 12px;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -222,7 +231,7 @@ body > div:nth-of-type(2) > div {
   border: 1px solid rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
   color: rgb(45, 45, 45);
-  font-family: sans-serif;
+  font-family: montserrat;
   line-height: 1.44;
   font-size: 14px;
   padding: 5px 15px;
@@ -235,6 +244,7 @@ body > div:nth-of-type(2) > div {
 .apply_coupon_outer {
   padding: 6px;
   border: 1px solid #eaeaea;
+  text-overflow: none;
 }
 
 .apply_coupon_outer > .apply_coupon {
@@ -244,28 +254,37 @@ body > div:nth-of-type(2) > div {
   background: rgba(66, 162, 161, 0.1);
   border-radius: 5px;
   padding: 10px;
+  text-overflow: none;
 }
 
 .apply_coupon_outer > .apply_coupon {
   display: flex;
+  align-items: center;
+  overflow: none;
+  text-overflow: none;
 }
 
 .apply_coupon_outer > .apply_coupon > p:first-child {
-  font-family: montserrat, sans-serif;
-  font-weight: 400;
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
   font-size: 12px;
   color: #42a2a2;
-  width: 100%;
+  width: auto;
   text-align: left;
+  overflow: none;
+  white-space: nowrap;
+  text-overflow: none;
 }
 
 .apply_coupon_outer > .apply_coupon > p:last-child {
-  font-family: montserrat, sans-serif;
+  font-family: "montserrat", "montserrat";
   font-weight: 1000;
   font-size: 12px;
   color: #42a2a2;
   width: 100%;
   text-align: right;
+  overflow: none;
+  text-overflow: none;
 }
 
 .price_details {
@@ -288,7 +307,6 @@ body > div:nth-of-type(2) > div {
 /* total mrp incld  */
 .price_details > div:nth-of-type(2) {
   display: flex;
-  font-family: montserrat, sans-serif !important;
   font-size: 12px;
   padding: 0px 20px;
   padding-bottom: 15px;
@@ -307,7 +325,6 @@ body > div:nth-of-type(2) > div {
 /* shipping charge */
 .price_details > div:nth-of-type(3) {
   display: flex;
-  font-family: montserrat, sans-serif !important;
   font-size: 12px;
   padding: 0px 20px;
   padding-bottom: 15px;
@@ -326,7 +343,6 @@ body > div:nth-of-type(2) > div {
 /* Bag discount charge */
 .price_details > div:nth-of-type(4) {
   display: flex;
-  font-family: montserrat, sans-serif;
   font-size: 12px;
   padding: 0px 20px;
   padding-bottom: 15px;
@@ -345,7 +361,6 @@ body > div:nth-of-type(2) > div {
 /* subtotal */
 .price_details > div:nth-of-type(5) {
   display: flex;
-  font-family: montserrat, sans-serif !important;
   font-size: 14px;
   padding: 0px 20px;
   padding-bottom: 15px;
@@ -365,7 +380,6 @@ body > div:nth-of-type(2) > div {
 /* total price and payment button */
 .price_bottom_section {
   display: flex;
-  font-family: montserrat, sans-serif !important;
   font-size: 12px;
   padding: 10px 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -378,7 +392,6 @@ body > div:nth-of-type(2) > div {
 .price_bottom_section > div {
   display: block;
   font-size: 12px;
-  font-family: montserrat, sans-serif;
   color: #000;
   line-height: 20px;
   padding: 0 0 4px;
@@ -399,7 +412,6 @@ body > div:nth-of-type(2) > div {
   background: #42a2a2;
   border-radius: 5px;
   font-size: 16px;
-  font-family: montserrat, sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   width: 100%;
@@ -407,8 +419,115 @@ body > div:nth-of-type(2) > div {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 400px) {
+#coupon_modal {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+
+.coupon_model_container {
+  position: absolute;
+  overflow: hidden;
+  width: 370px;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.coupon_model_container > .coupon_title_apply_box {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000;
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.coupon_title_apply_box:after {
+  content: "";
+  display: block;
+  background: #fdd835;
+  height: 2px;
+  width: 102px;
+  margin: 11px auto 0;
+}
+
+#error_coupon_holder {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  padding: 12px;
+  background-color: rgb(253, 244, 244);
+  color: #e02020;
+  width: 100%;
+  font-size: 12px;
+  line-height: 13px;
+  border-radius: 5px;
+  text-align: left;
+  display: none;
+}
+
+.coupon_model_container > form > input {
+  font-size: 14px;
+  font-family: montserrat-regular, sans-serif;
+  text-transform: uppercase;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 5px 0;
+  border-bottom: 2px solid #42a2a2;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.coupon_model_container > form > input::placeholder {
+  /* letter-spacing: .4px; */
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  font-weight: bold;
+}
+
+.coupon_model_container > form > :focus {
+  border-bottom: 2px solid #42a2a2;
+}
+
+#coupon_apply_button {
+  background-color: #42a2a2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-family: montserrat, sans-serif;
+  text-transform: uppercase;
+  padding: 16px 0;
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 961px) {
   body > div:nth-of-type(2) > div {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #cart-item-container {
+    width: 100%;
+  }
+
+  #cart-item-container + div {
+    width: 100%;
   }
 }
