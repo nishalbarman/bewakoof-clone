@@ -24,6 +24,13 @@ var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || [
 ];
 var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
+var totalItems = document.querySelector("#total-items");
+if (cartItems.length == 1) {
+  totalItems.innerText = `${cartItems.length} item`;
+} else if (cartItems.length > 1) {
+  totalItems.innerText = `${cartItems.length} item(s)`;
+}
+
 var cardAppend = document.getElementById("cart-append");
 // cardAppend.innerHTML=""
 
@@ -127,6 +134,12 @@ function displayThings(arr) {
 
     removeButton.addEventListener("click", function (event) {
       event.target.parentNode.parentNode.remove();
+      cartItems.splice(index, 1);
+      if (cartItems.length == 1) {
+        totalItems.innerText = `${cartItems.length} item`;
+      } else if (cartItems.length > 1) {
+        totalItems.innerText = `${cartItems.length} item(s)`;
+      }
     });
   });
 }
