@@ -6,7 +6,7 @@ Cart is an option for users to store their liked product in a bucket, just like 
 
 # cart Object structure
 
-```var obj = {
+`var obj = {
   imgurl:
     "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
   title: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
@@ -14,7 +14,7 @@ Cart is an option for users to store their liked product in a bucket, just like 
   discountPrice: 500,
   size: "S",
   quantity: 1,
-};```
+};`
 
 #Local Storage Key's
     Total price = *bewakoof-cart-total-price*
