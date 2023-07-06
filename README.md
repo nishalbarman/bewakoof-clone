@@ -2,11 +2,11 @@
 
 # Cart page
 
-Cart page is the page where users can see the cart items after adding any item in cart from the product page.
+Cart is an option for users to store their liked product in a bucket, just like using a bag when we go for shopping on a mall. Thats how cart is. This cart is the clone from the bewakoof.com websites cart. Basically we are 5 team members contributing to create a clone of bewakoof.com.
 
-#cart Object structure
+# cart Object structure
 
-````var obj = {
+```var obj = {
   imgurl:
     "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
   title: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
