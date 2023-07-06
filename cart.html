@@ -6,7 +6,9 @@
     <title>Online Fashion Shopping for Men, Women, Accessories - Bewakoof.com</title>
 
     <!-- font awesome styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- style file here -->
     <link rel="stylesheet" href="./styles/cart.css" />
@@ -20,51 +22,115 @@
     <!-- Main Container -->
     <div>
         <p><b>My Bag </b><span>1 item</span></p>
-
-
         <!-- Cart items, price and coupon section  -->
         <div>
             <!-- cart items container  -->
             <div id="cart-item-container">
                 <div>
                     <img src="https://images.bewakoof.com/web/Red-truck.png" alt="truck" class="truck">
-                    <p>
-                        Yay! You get FREE delivery on this order
-                    </p>
+                    <p>Yay! You get FREE delivery on this order</p>
                 </div>
-                <div class="child">
-                    <div>
-                        <p>Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt</p>
-                        <p><span>₹649</span> <span>₹1299</span></p>
-                        <p>You saved <span>₹650</span>!</p>
-
-                        <!-- quantity and size div  -->
-                        <div class="qp">
+                <div id="cart-items">
+                    <div class="child">
+                        <div class="upper">
                             <div>
-                                <span>Size :</span>
-                                <b>
-                                    <i class="fa-light fa-chevron-down"></i>
-                                </b>
+                                <p>Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt</p>
+                                <p><span>₹649</span> <span>₹1299</span></p>
+                                <p>You saved <span>₹650</span>!</p>
+
+                                <!-- quantity and size div  -->
+                                <div class="qp">
+                                    <div id="sizeButton">
+                                        <span>Size :</span>
+                                        <b>
+                                            <span id="size">S</span>
+                                        </b>
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+
+                                    <div id="qtyButton">
+                                        <span>Qty :</span>
+                                        <b>
+                                            <span id="qty">1</span>
+                                        </b>
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </div>
+                                </div>
                             </div>
-
                             <div>
-                                <span>Qty :</span>
-                                <b>
-                                    <i class="fa-light fa-chevron-down"></i>
-                                </b>
+                                <img src="https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg"
+                                    alt="product" />
                             </div>
                         </div>
 
-                    </div>
-                    <div>
-                        <img src="https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg"
-                            alt="product" />
+                        <!-- Remove and Wishlist button  -->
+                        <div class="bottom_section">
+                            <div id="removeButton" class="remove_button">
+                                Remove
+                            </div>
+                            <div id="wishList" class="move_to_wishlist"> Move to Wishlist </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- payments details and coupons -->
             <div>
+                <div id="coupons_text">
+                    <div>
+                        <p>Whistles! Get extra 20% Cashback on any orders. Coupon code - MASAI20. Applicable for new/old
+                            customers!</p>
+                    </div>
+                </div>
+                <div class="apply_coupon_outer">
+                    <div class="apply_coupon" id="couponApply">
+                        <p>Apply Coupon / Gift Card / Referral</p>
+                        <p>Redeem! <img src="https://images.bewakoof.com/web/coupon-redeem-arrow-1634641878.png" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div class="price_details">
+                    <div>
+                        <p>PRICE SUMMARY</p>
+                    </div>
+                    <div>
+                        <p>Total MRP (Incl. of taxes)</p>
+                        <p id="originalprice">₹2598</p>
+                    </div>
+                    <div>
+                        <p>Shipping Charges </p>
+                        <p id="shippingprice">FREE</p>
+                    </div>
+                    <div>
+                        <p>Bag Discount</p>
+                        <p id="bagdiscount">- ₹1300</p>
+                    </div>
+                    <div>
+                        <p>Subtotal </p>
+                        <p id="bagdiscount">₹1298</p>
+                    </div>
+                    <div class="price_bottom_section">
+                        <div>
+                            <p>Total</p>
+                            <p>₹ 1298</p>
+                        </div>
+                        <button id="continuePayment">Continue</button>
+                    </div>
+                    <div class="bottom_images">
+                        <div>
+                            <img src="https://images.bewakoof.com/web/cart-badge-trust.svg" alt="cart_100%_secure" />
+                            <p>100% SECURE PAYMENTS</p>
+                        </div>
+                        <div>
+                            <img src="https://images.bewakoof.com/web/cart-easy-return.svg" alt="quick_return" />
+                            <p>EASY RETURNS & QUICK REFUNDS</p>
+                        </div>
+                        <div>
+                            <img src="https://images.bewakoof.com/web/quality-check.svg" alt="quality_assurance" />
+                            <p>QUALITY ASSURANCE</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -74,7 +140,5 @@
     <!-- script file here -->
     <script src="./scripts/cartJS.js"></script>
 
-    <!-- font aweseome script  -->
-    <script src="https://kit.fontawesome.com/541ab0dea8.js" crossorigin="anonymous"></script>
 </body>
 </html>
