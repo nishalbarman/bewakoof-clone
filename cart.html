@@ -30,7 +30,7 @@
                     <img src="https://images.bewakoof.com/web/Red-truck.png" alt="truck" class="truck">
                     <p>Yay! You get FREE delivery on this order</p>
                 </div>
-                <div id="cart-items">
+                <div id="cart-append">
                     <div class="child">
                         <div class="upper">
                             <div>
@@ -62,13 +62,12 @@
                                     alt="product" />
                             </div>
                         </div>
-
                         <!-- Remove and Wishlist button  -->
                         <div class="bottom_section">
                             <div id="removeButton" class="remove_button">
                                 Remove
                             </div>
-                            <div id="wishList" class="move_to_wishlist"> Move to Wishlist </div>
+                            <div id="wishList" class="move_to_wishlist"> Move to Wishlist</div>
                         </div>
                     </div>
                 </div>
@@ -107,12 +106,12 @@
                     </div>
                     <div>
                         <p>Subtotal </p>
-                        <p id="bagdiscount">₹1298</p>
+                        <p id="subtotal">₹1298</p>
                     </div>
                     <div class="price_bottom_section">
                         <div>
                             <p>Total</p>
-                            <p>₹ 1298</p>
+                            <p id="totalprice">₹ 1298</p>
                         </div>
                         <button id="continuePayment">Continue</button>
                     </div>
@@ -142,14 +141,50 @@
         <div class="coupon_model_container">
             <p class="coupon_title_apply_box">Apply Coupon / Gift Card</p>
             <form id="coupon-form">
-                <input type="text" id="cpn_code" placeholder="ENTER CODE" />
+                <input type="text" id="cpn_code" placeholder="ENTER CODE" autocomplete="false" />
                 <div id="error_coupon_holder"><span id="error-text">Invalid
                         Code</span></div>
-                <button id="coupon_apply_button">APPLY</button>
+                <button type="submit" id="coupon_apply_button">APPLY</button>
         </div>
     </div>
 
-    <footer style="position: fixed;bottom: 0;width: 100%;">
+    <!-- size modal -->
+    <div id="size_modal">
+        <div class="size_model_container">
+            <p>Select Size</p>
+            <p id="s">S</p>
+            <p id="s">M</p>
+            <p id="s">L</p>
+            <p id="s">XL</p>
+            <p id="s">2XL</p>
+            <p id="s">3XL</p>
+        </div>
+    </div>
+
+    <!-- quantity modal  -->
+    <div id="qty_modal">
+        <div class="qty_model_container">
+            <p>Select Quantity</p>
+            <p id="s">1</p>
+            <p id="s">2</p>
+            <p id="s">3</p>
+            <p id="s">4</p>
+            <p id="s">5</p>
+            <p id="s">6</p>
+            <p id="s">7</p>
+            <p id="s">8</p>
+            <p id="s">9</p>
+            <p id="s">10</p>
+        </div>
+    </div>
+
+    <div style="height: 80px;">
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <footer style=" position: fixed;bottom: 0;width: 100%;">
         <div style="margin-top: 0px; text-align: center; background: rgb(251, 251, 251);">
             <img src="https://images.bewakoof.com/web/secure-payments-image.png" alt="some_payment_images"
                 style="max-width: 257px;width: 100%;margin: 10px auto;" />
@@ -157,7 +192,7 @@
     </footer>
 
     <!-- script file here -->
-    <script src="./scripts/cartJS.js"></script>
+    <script src="./scripts/cart.js"></script>
 
 </body>
 </html>
