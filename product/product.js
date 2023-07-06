@@ -7,7 +7,8 @@ var mensData = [
         price : "₹799",
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
-        button1 : "100% COTTON"
+        button1 : "100% COTTON",
+        a:"http://127.0.0.1:5500/fancy-thunder-426/product/details/product_1.html",
     },
     {
         image_url : "https://images.bewakoof.com/t640/men-s-black-thunder-breathing-1st-form-graphic-printed-oversized-t-shirt-599563-1687766143-1.jpg",
@@ -16,7 +17,8 @@ var mensData = [
         price : "₹649",
         strikeoffPrice : "₹1299",
         button : "₹599 for Tribe Members",
-        button1 : "100% COTTON"
+        button1 : "100% COTTON",
+        a:"http://127.0.0.1:5500/fancy-thunder-426/product/product_1.html",
     },
     {
         image_url : "https://images.bewakoof.com/t640/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
@@ -25,7 +27,8 @@ var mensData = [
         price : "₹599",
         strikeoffPrice : "₹1299",
         button : "₹549 for Tribe Members",
-        button1 : "100% COTTON"
+        button1 : "100% COTTON",
+        a:"http://127.0.0.1:5500/fancy-thunder-426/product/product_1.html",
     },
     {
         image_url : "https://images.bewakoof.com/t640/men-s-black-skater-donald-graphic-printed-oversized-t-shirt-602561-1688380293-1.jpg",
@@ -221,49 +224,54 @@ var mensData = [
 
 // var Men = JSON.parse(localStorage.getItem("productMen")) || []
 
-displayMen(mensData)
+displayMen(mensData);
 
+function displayMen(Men) {
+  mensData.map(function (ele, ind) {
+    var div = document.createElement("div");
 
+    var span = document.createElement("span");
+    span.setAttribute("id", "span");
 
-function displayMen(Men){
+    var alink = document.createElement("a");
+    alink.setAttribute("href", ele.a);
 
-    mensData.map(function(ele,ind){
-        var div = document.createElement("div")
+    var image = document.createElement("img");
+    image.setAttribute("src", ele.image_url);
+    image.setAttribute("alt", ele.name);
 
-        var image = document.createElement("img")
-        image.setAttribute("src",ele.image_url)
-        image.setAttribute("alt",ele.name)
+    var name = document.createElement("h3");
+    name.textContent = ele.name;
+    console.log(ele.name);
 
-        var name = document.createElement("h3")
-        name.textContent = ele.name
-        console.log(ele.name)
+    var ptag = document.createElement("p");
+    ptag.textContent = ele.ptag;
 
-        var ptag = document.createElement("p")
-        ptag.textContent = ele.ptag
+    var priceBox = document.createElement("div");
+    priceBox.setAttribute("id", "priceBox");
 
-        var priceBox = document.createElement("div")
-        priceBox.setAttribute("id","priceBox")
+    var price = document.createElement("p");
+    price.textContent = ele.price;
 
-        var price = document.createElement("p")
-        price.textContent = ele.price
+    var strikeoffPrice = document.createElement("p");
+    strikeoffPrice.textContent = ele.strikeoffPrice;
 
-        var strikeoffPrice = document.createElement("p")
-        strikeoffPrice.textContent = ele.strikeoffPrice
+    var button = document.createElement("button");
+    button.textContent = ele.button;
 
-        var button = document.createElement("button")
-        button.textContent = ele.button
+    var displayButton = document.createElement("div");
+    displayButton.setAttribute("id", "displayBtn");
 
-        var displayButton = document.createElement("div")
-        displayButton.setAttribute("id","displayBtn")
+    var button1 = document.createElement("button");
+    button1.textContent = ele.button1;
 
-        var button1 = document.createElement("button")
-        button1.textContent = ele.button1
+    span.append(image);
+    alink.append(span);
+    div.append(alink, name, ptag, priceBox, displayButton);
 
-        priceBox.append(price,strikeoffPrice)
-        displayButton.append(button,button1)
+    priceBox.append(price, strikeoffPrice);
+    displayButton.append(button, button1);
 
-        div.append(image,name,ptag,priceBox,displayButton)
-        document.querySelector("#products").append(div)
-
-    })
+    document.querySelector("#products").append(div);
+  });
 }
