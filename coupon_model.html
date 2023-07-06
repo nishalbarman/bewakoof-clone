@@ -8,75 +8,79 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        * {
-            margin: 0px;
-            box-sizing: border-box;
-        }
-
-        #qty_modal {
-            display: block;
-            background: rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .qty_model_container {
-            position: absolute;
-            overflow: hidden;
-            width: fit-content;
-            max-height: 100%;
-            top: 50%;
-            left: 50%;
-            background: #fff;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-        }
-
-        .qty_model_container>p:first-child {
-            margin-bottom: 15px;
-            font-size: 12px;
-            opacity: .7;
-            display: block;
-        }
-
-        .qty_model_container>p:nth-child(1)~p {
-            font-family: montserrat;
-            font-size: 16px;
-            padding: 10px 40px;
-            border: none;
-            text-decoration: initial;
-            letter-spacing: 2px;
-            line-height: 1.428571429;
-            background-color: #fff;
-            cursor: pointer;
-        }
-
-        .qty_model_container>p:nth-child(1)~p:hover {
-            background-color: rgb(230, 230, 230);
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/style.css" />
 </head>
 <body>
-    <div id="qty_modal">
-        <div class="qty_model_container">
-            <p>Select Quantity</p>
-            <p id="s">1</p>
-            <p id="s">2</p>
-            <p id="s">3</p>
-            <p id="s">4</p>
-            <p id="s">5</p>
-            <p id="s">6</p>
-            <p id="s">7</p>
-            <p id="s">8</p>
-            <p id="s">9</p>
-            <p id="s">10</p>
+    <div class="no-item">
+        <img src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png" alt="empty-bag" />
+        <p>Nothing in the bag</p>
+        <a id="continuetohome" href="/index.html">Continue Shopping</a>
+
+
+        <div class="category">
+            <p>You could try one of these categories:</p>
+            <div id="resp-table">
+                <div id="resp-table-body">
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Men
+                        </div>
+                        <div class="table-body-cell">
+                            Topwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bottomwear
+                        </div>
+                    </div>
+
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                        </div>
+                        <div class="table-body-cell">
+                            Footwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bestsellers
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Women
+                        </div>
+                        <div class="table-body-cell">
+                            Topwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bottomwear
+                        </div>
+                    </div>
+
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+
+                        </div>
+                        <div class="table-body-cell">
+                            Bestsellers
+                        </div>
+                        <div class="table-body-cell">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Mobile Covers
+                        </div>
+                        <div class="table-body-cell">
+                            All Mobile Covers
+                        </div>
+                        <div class="table-body-cell">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

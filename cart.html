@@ -16,10 +16,11 @@
 <body>
     <!-- Navbar -->
     <div>
-        <img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="bewakoof log">
+        <img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="bewakoof log"
+            onclick="homePage()">
     </div>
 
-    <!-- Main Cart Container -->
+    <!-- main Cart Container -->
     <div id="main_cart_container">
         <p><b>My Bag </b><span id="total-items">1 item</span></p>
         <!-- Cart items, price and coupon section  -->
@@ -31,45 +32,7 @@
                     <p>Yay! You get FREE delivery on this order</p>
                 </div>
                 <div id="cart-append">
-                    <div class="child">
-                        <div class="upper">
-                            <div>
-                                <p>Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt</p>
-                                <p><span>₹649</span> <span>₹1299</span></p>
-                                <p>You saved <span>₹650</span>!</p>
 
-                                <!-- quantity and size div  -->
-                                <div class="qp">
-                                    <div id="sizeButton">
-                                        <span>Size :</span>
-                                        <b>
-                                            <span id="size">S</span>
-                                        </b>
-                                        <i class="fa-solid fa-angle-down"></i>
-                                    </div>
-
-                                    <div id="qtyButton">
-                                        <span>Qty :</span>
-                                        <b>
-                                            <span id="qty">1</span>
-                                        </b>
-                                        <i class="fa-solid fa-angle-down"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <img src="https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg"
-                                    alt="product" />
-                            </div>
-                        </div>
-                        <!-- Remove and Wishlist button  -->
-                        <div class="bottom_section">
-                            <div id="removeButton" class="remove_button">
-                                Remove
-                            </div>
-                            <div id="wishList" class="move_to_wishlist"> Move to Wishlist</div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -136,6 +99,81 @@
         </div>
     </div>
 
+    <!-- empty cart display -->
+    <div id="emptydisplay" class="no-item">
+        <img src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png" alt="empty-bag" style="margin: auto;
+        width: 150px;" />
+        <p>Nothing in the bag</p>
+        <a id="continuetohome" href="/index.html">Continue Shopping</a>
+
+
+        <div class="category">
+            <p>You could try one of these categories:</p>
+            <div id="resp-table">
+                <div id="resp-table-body">
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Men
+                        </div>
+                        <div class="table-body-cell">
+                            Topwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bottomwear
+                        </div>
+                    </div>
+
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                        </div>
+                        <div class="table-body-cell">
+                            Footwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bestsellers
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Women
+                        </div>
+                        <div class="table-body-cell">
+                            Topwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bottomwear
+                        </div>
+                    </div>
+
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+
+                        </div>
+                        <div class="table-body-cell">
+                            Bestsellers
+                        </div>
+                        <div class="table-body-cell">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Mobile Covers
+                        </div>
+                        <div class="table-body-cell">
+                            All Mobile Covers
+                        </div>
+                        <div class="table-body-cell">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- modals section  -->
     <div id="coupon_modal">
         <div class="coupon_model_container">
@@ -152,12 +190,12 @@
     <div id="size_modal">
         <div class="size_model_container">
             <p>Select Size</p>
-            <p id="s">S</p>
-            <p id="s">M</p>
-            <p id="s">L</p>
-            <p id="s">XL</p>
-            <p id="s">2XL</p>
-            <p id="s">3XL</p>
+            <p id="S">S</p>
+            <p id="M">M</p>
+            <p id="L">L</p>
+            <p id="XL">XL</p>
+            <p id="2XL">2XL</p>
+            <p id="3XL">3XL</p>
         </div>
     </div>
 
@@ -165,16 +203,16 @@
     <div id="qty_modal">
         <div class="qty_model_container">
             <p>Select Quantity</p>
-            <p id="s">1</p>
-            <p id="s">2</p>
-            <p id="s">3</p>
-            <p id="s">4</p>
-            <p id="s">5</p>
-            <p id="s">6</p>
-            <p id="s">7</p>
-            <p id="s">8</p>
-            <p id="s">9</p>
-            <p id="s">10</p>
+            <p id="1">1</p>
+            <p id="2">2</p>
+            <p id="3">3</p>
+            <p id="4">4</p>
+            <p id="5">5</p>
+            <p id="6">6</p>
+            <p id="7">7</p>
+            <p id="8">8</p>
+            <p id="9">9</p>
+            <p id="10">10</p>
         </div>
     </div>
 

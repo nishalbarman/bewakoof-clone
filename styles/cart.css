@@ -41,10 +41,11 @@ body > div:nth-of-type(1) {
 }
 
 /* NavBar image */
-body > div > img {
+body > div > img[alt="bewakoof log"] {
   height: 30px;
   padding: 2px;
   padding-left: 10%;
+  cursor: pointer;
 }
 
 /* Main thing container  */
@@ -630,6 +631,71 @@ body > div:nth-of-type(2) > div {
 
 .qty_model_container > p:nth-child(1) ~ p:hover {
   background-color: rgb(230, 230, 230);
+}
+
+.no-item {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.no-item > img + p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.no-item > img {
+  margin: auto;
+  width: 150px;
+}
+
+#continuetohome {
+  padding: 12px 12px;
+  border: 2px solid;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  color: #51cccc;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.category {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.category > p:first-child {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#resp-table {
+  display: table;
+}
+
+#resp-table-body {
+  display: table-row-group;
+}
+
+.resp-table-row {
+  display: table-row;
+}
+
+.table-body-cell {
+  display: table-cell;
+  padding: 0px 20px;
+}
+
+.table-body-cell:first-of-type ~ .table-body-cell {
+  text-decoration: underline !important;
+  color: #51cccc;
 }
 
 @media only screen and (max-width: 961px) {

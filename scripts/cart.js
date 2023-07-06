@@ -1,27 +1,28 @@
-var obj = {
-  imgurl:
-    "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
-  title: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
-  originalPrice: 1000,
-  discountPrice: 500,
-  size: "S",
-  quantity: 1,
-};
-
-var obj2 = {
-  imgurl:
-    "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
-  title: "Men's Black T-shirt",
-  originalPrice: 999,
-  discountPrice: 399,
-  size: "S",
-  quantity: 2,
-};
-
-var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || [
-  obj,
-  obj2,
+var data = [
+  {
+    imgurl:
+      "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
+    title:
+      "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
+    originalPrice: 1000,
+    discountPrice: 500,
+    size: "S",
+    quantity: 1,
+  },
+  {
+    imgurl:
+      "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
+    title: "Men's Black T-shirt",
+    originalPrice: 999,
+    discountPrice: 399,
+    size: "S",
+    quantity: 2,
+  },
 ];
+
+// localStorage.setItem("bewakoof-cart-items", JSON.stringify(data));
+
+var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || [];
 var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
 var totalItems = document.querySelector("#total-items");
@@ -30,6 +31,9 @@ if (cartItems.length == 1) {
 } else if (cartItems.length > 1) {
   totalItems.innerText = `${cartItems.length} item(s)`;
 }
+
+var empty_display = document.getElementById("emptydisplay");
+var maincartContainer = document.getElementById("main_cart_container");
 
 var cardAppend = document.getElementById("cart-append");
 // cardAppend.innerHTML=""
@@ -55,93 +59,119 @@ applyCoupon.addEventListener("click", function (event) {
 });
 
 displayThings(cartItems);
+console.log(cartItems.length);
 
 function displayThings(arr) {
-  cardAppend.innerHTML = "";
-  arr.forEach(function (element, index) {
-    var divChild = document.createElement("div");
-    var divUpper = document.createElement("div");
-    var cartContent = document.createElement("div");
-    var title = document.createElement("p");
-    var prices = document.createElement("p");
-    var priceSaved = document.createElement("p");
-    var btnQuanSize = document.createElement("div");
-    var sizeButton = document.createElement("div");
-    var qtyButton = document.createElement("div");
-    var imageContainer = document.createElement("div");
-    var productImg = document.createElement("img");
-    var bottomSection = document.createElement("div");
-    var removeButton = document.createElement("div");
-    var wishListButton = document.createElement("div");
+  if (arr.length !== 0) {
+    maincartContainer.style.display = "block";
+    empty_display.style.display = "none";
+    cardAppend.innerHTML = "";
+    arr.forEach(function (element, index) {
+      var divChild = document.createElement("div");
+      var divUpper = document.createElement("div");
+      var cartContent = document.createElement("div");
+      var title = document.createElement("p");
+      var prices = document.createElement("p");
+      var priceSaved = document.createElement("p");
+      var btnQuanSize = document.createElement("div");
+      var sizeButton = document.createElement("div");
+      var qtyButton = document.createElement("div");
+      var imageContainer = document.createElement("div");
+      var productImg = document.createElement("img");
+      var bottomSection = document.createElement("div");
+      var removeButton = document.createElement("div");
+      var wishListButton = document.createElement("div");
 
-    divChild.setAttribute("class", "child");
-    divUpper.setAttribute("class", "upper");
-    btnQuanSize.setAttribute("class", "qp");
+      divChild.setAttribute("class", "child");
+      divUpper.setAttribute("class", "upper");
+      btnQuanSize.setAttribute("class", "qp");
 
-    var quantity = element.quantity;
-    var original = element.originalPrice;
-    var discount = element.discountPrice;
+      var quantity = element.quantity;
+      var original = element.originalPrice;
+      var discount = element.discountPrice;
 
-    var price = quantity * original;
-    var dis = quantity * discount;
-    var bagdiscount = price - dis;
+      var price = quantity * original;
+      var dis = quantity * discount;
+      var bagdiscount = price - dis;
 
-    originalPrice += original;
-    bagDiscount += bagdiscount;
-    subtotal += dis;
-    totalprice += dis;
+      originalPrice += original;
+      bagDiscount += bagdiscount;
+      subtotal += dis;
+      totalprice += dis;
 
-    localStorage.setItem("bewakoof-cart-total-price", totalprice);
+      localStorage.setItem("bewakoof-cart-total-price", totalprice);
 
+      originalPriceElement.innerText = `₹${originalPrice}`; //original mrp
+      totalpriceElement.innerText = `₹ ${totalprice}`; // total price to checkout
+      bagdiscountElement.innerText = `- ₹${bagDiscount}`; // bag discount
+      subtotalElement.innerText = `₹${subtotal}`; // subtotal
+
+      title.textContent = element.title;
+      prices.innerHTML = `<span>₹${dis}</span> <span>₹${price}</span>`;
+      priceSaved.innerHTML = `You saved <span>₹${bagdiscount}</span>!`;
+      sizeButton.setAttribute("id", "sizeButton");
+      sizeButton.innerHTML = `<span>Size :</span> <b> <span id="size">${element.size}</span> </b> <i className="fa-solid fa-angle-down" />`;
+      qtyButton.setAttribute("id", "qtyButton");
+      qtyButton.innerHTML = `<span>Qty :</span> <b> <span id="qty">${element.quantity}</span> </b> <i className="fa-solid fa-angle-down" />`;
+      productImg.setAttribute("src", element.imgurl);
+      productImg.setAttribute("alt", element.title);
+      removeButton.textContent = "Remove";
+      wishListButton.textContent = "Move to Wishlist";
+      bottomSection.setAttribute("class", "bottom_section");
+      removeButton.setAttribute("id", "removeButton");
+      removeButton.setAttribute("class", "remove_button");
+      wishListButton.setAttribute("id", "wishList");
+      wishListButton.setAttribute("class", "move_to_wishlist");
+
+      sizeButton.addEventListener("click", function (event) {
+        showSizeModal(index);
+      });
+
+      qtyButton.addEventListener("click", function (event) {
+        showQtyModal(index);
+      });
+
+      // appending start here
+      btnQuanSize.append(sizeButton, qtyButton);
+      bottomSection.append(removeButton, wishListButton);
+      cartContent.append(title, prices, priceSaved, btnQuanSize);
+      imageContainer.append(productImg);
+      divUpper.append(cartContent, imageContainer);
+      divChild.append(divUpper, bottomSection);
+      cardAppend.append(divChild);
+
+      removeButton.addEventListener("click", function (event) {
+        event.target.parentNode.parentNode.remove();
+        cartItems.splice(index, 1);
+        if (cartItems.length == 1) {
+          totalItems.innerText = `${cartItems.length} item`;
+        } else if (cartItems.length > 1) {
+          totalItems.innerText = `${cartItems.length} item(s)`;
+        }
+        localStorage.setItem("bewakoof-cart-items", JSON.stringify(cartItems));
+
+        originalPrice = 0;
+        bagDiscount = 0;
+        subtotal = 0;
+        totalprice = 0;
+        displayThings(cartItems);
+      });
+    });
+    offerApply(localStorage.getItem("offer-applied"));
+  } else {
+    originalPrice = 0;
+    bagDiscount = 0;
+    subtotal = 0;
+    totalprice = 0;
     originalPriceElement.innerText = `₹${originalPrice}`; //original mrp
     totalpriceElement.innerText = `₹ ${totalprice}`; // total price to checkout
     bagdiscountElement.innerText = `- ₹${bagDiscount}`; // bag discount
     subtotalElement.innerText = `₹${subtotal}`; // subtotal
+    localStorage.setItem("bewakoof-cart-total-price", totalprice);
 
-    title.textContent = element.title;
-    prices.innerHTML = `<span>₹${dis}</span> <span>₹${price}</span>`;
-    priceSaved.innerHTML = `You saved <span>₹${bagdiscount}</span>!`;
-    sizeButton.setAttribute("id", "sizeButton");
-    sizeButton.innerHTML = `<span>Size :</span> <b> <span id="size">${element.size}</span> </b> <i className="fa-solid fa-angle-down" />`;
-    qtyButton.setAttribute("id", "qtyButton");
-    qtyButton.innerHTML = `<span>Qty :</span> <b> <span id="qty">${element.quantity}</span> </b> <i className="fa-solid fa-angle-down" />`;
-    productImg.setAttribute("src", element.imgurl);
-    productImg.setAttribute("alt", element.title);
-    removeButton.textContent = "Remove";
-    wishListButton.textContent = "Move to Wishlist";
-    bottomSection.setAttribute("class", "bottom_section");
-    removeButton.setAttribute("id", "removeButton");
-    removeButton.setAttribute("class", "remove_button");
-    wishListButton.setAttribute("id", "wishList");
-    wishListButton.setAttribute("class", "move_to_wishlist");
-
-    sizeButton.addEventListener("click", function () {
-      showSizeModal();
-    });
-
-    qtyButton.addEventListener("click", function () {
-      showQtyModal();
-    });
-
-    // appending start here
-    btnQuanSize.append(sizeButton, qtyButton);
-    bottomSection.append(removeButton, wishListButton);
-    cartContent.append(title, prices, priceSaved, btnQuanSize);
-    imageContainer.append(productImg);
-    divUpper.append(cartContent, imageContainer);
-    divChild.append(divUpper, bottomSection);
-    cardAppend.append(divChild);
-
-    removeButton.addEventListener("click", function (event) {
-      event.target.parentNode.parentNode.remove();
-      cartItems.splice(index, 1);
-      if (cartItems.length == 1) {
-        totalItems.innerText = `${cartItems.length} item`;
-      } else if (cartItems.length > 1) {
-        totalItems.innerText = `${cartItems.length} item(s)`;
-      }
-    });
-  });
+    empty_display.style.display = "flex";
+    maincartContainer.style.display = "none";
+  }
 }
 
 var checkoutBtn = document.getElementById("continuePayment");
@@ -159,8 +189,14 @@ couponForm.addEventListener("submit", function (event) {
     erroBox.style.display = "block";
   } else {
     if (code === "MASAI20") {
-      offerApply("true");
-      dissmissCouponModal();
+      if (localStorage.getItem("offer-applied")) {
+        var erroBox = document.getElementById("error_coupon_holder");
+        erroBox.textContent = "Offer Already Applied";
+        erroBox.style.display = "block";
+      } else {
+        offerApply("true");
+        dissmissCouponModal();
+      }
     } else {
       var erroBox = document.getElementById("error_coupon_holder");
       erroBox.textContent = "Invalid Code";
@@ -182,6 +218,7 @@ function offerApply(status) {
     totalpriceElement.innerText = `₹ ${Math.floor(totalprice)}`;
     bagdiscountElement.innerText = `- ₹${Math.floor(bagDiscount)}`;
     subtotalElement.innerText = `₹${Math.floor(subtotal)}`;
+    localStorage.setItem("bewakoof-cart-total-price", totalprice);
   }
 }
 
@@ -192,14 +229,40 @@ function showCouponModal() {
   modal.style.display = "block";
 }
 
-function showSizeModal() {
+function showSizeModal(index) {
   var sizemodal = document.getElementById("size_modal");
   sizemodal.style.display = "block";
+  var allP = document.querySelectorAll(".size_model_container>p:first-child~p");
+  allP.forEach(function (element) {
+    element.addEventListener("click", function () {
+      cartItems[index].size = element.innerText;
+      localStorage.setItem("bewakoof-cart-items", JSON.stringify(cartItems));
+      originalPrice = 0;
+      bagDiscount = 0;
+      subtotal = 0;
+      totalprice = 0;
+      displayThings(cartItems);
+      dissmisSizeModal();
+    });
+  });
 }
 
-function showQtyModal() {
+function showQtyModal(index) {
   var qty_modal = document.getElementById("qty_modal");
   qty_modal.style.display = "block";
+  var allP = document.querySelectorAll(".qty_model_container>p:first-child~p");
+  allP.forEach(function (element) {
+    element.addEventListener("click", function () {
+      cartItems[index].quantity = +element.innerText;
+      localStorage.setItem("bewakoof-cart-items", JSON.stringify(cartItems));
+      originalPrice = 0;
+      bagDiscount = 0;
+      subtotal = 0;
+      totalprice = 0;
+      displayThings(cartItems);
+      dissmisQtyModal();
+    });
+  });
 }
 
 // all the modals here
@@ -223,6 +286,16 @@ function dissmissCouponModal() {
   modal.style.display = "none";
 }
 
-window.onload = function () {
-  offerApply(localStorage.getItem("offer-applied"));
-};
+function dissmisSizeModal() {
+  var sizemodal = document.getElementById("size_modal");
+  sizemodal.style.display = "none";
+}
+
+function dissmisQtyModal() {
+  var qty_modal = document.getElementById("qty_modal");
+  qty_modal.style.display = "none";
+}
+
+function homePage() {
+  document.location = "./index.html";
+}
