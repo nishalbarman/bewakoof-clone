@@ -11,4 +11,20 @@ num_arr.push({
     phone:phone,
   })
 localStorage.setItem("usernumber",JSON.stringify(num_arr));
+console.log(phone);
+if(phone=="")
+{
+  alert("enter number");
+}
+else{
+  window.location.assign("mainsignup.html")
+}
+
 });
+
+function func(){
+  var login=document.querySelector(".log");
+  console.log("clicked");
+  window.location.assign("login.html");
+
+}

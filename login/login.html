@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="./signup.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <!-- NavBar Starts Here -->
-    <div class=" first-nav flex">
+     <!-- NavBar Starts Here -->
+     <div class=" first-nav flex">
         <div class="left-first-nav flex">
             <p class="pointer">Offers</p>
             <p class="pointer"> Facebook</p>
@@ -40,33 +40,21 @@
         </div>
     </div>
 
-     <hr>
+        <hr>
     
     <!-- NavBar Completed -->
-    <main>
-        <div class="box">
-            <div class="inner-box">
-                <div class="image-wrap">
-                    <img src="./login image.PNG" alt="image">
-                </div>
-                <div class="forms-wrap">
-                    <form id="signUpForm">
-                        <h1>Log in / Sign up</h1>
-                        <p class="login-text">for Latest trends, exciting offers and everything Bewakoof<span class="tradeMark">®</span>!</p>
-                        <div id="signUpContainer">
-                          <input placeholder="phone" id="phone" type="number" style="width: 100%; padding: 12px;">
-                          <button style="width: 100%; padding: 12px; margin-top: 10px; background-color: #42a2a2; color: white;">Continue</button>
-                        </div>
-                      </form>
-                      <button class="log" style="width: 100%; padding: 12px; margin-top: 10px;" onclick="func()">Continue With Email</button>
-
-                </div>
-            
-            </div>
-
-        </div>
-    </main>
     
+        <div class="box">
+            <div class="childbox">
+                <h1>Log in to your account</h1>
+                <form id="loginForm">
+                    <input placeholder="email" id="email" type="email">
+                    <input placeholder="password" id="password" type="password">
+                    <input id="Submit"  type="submit">
+                </form>
+               
+            </div>
+        </div>
 </body>
-<script src="./signup.js"></script>
+<script src="./login.js"></script>
 </html>
