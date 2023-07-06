@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div><img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="" id="logo"></div>
+    <hr>
+    <div id="payment">
+      <h4>Choose your payment method</h4>
+      <div id="method">
+        <div id="optionside">
+          <div class="options" id="debitcard">
+            
+              <img src="https://images.bewakoof.com/web/bank-card-fill-1645697857.svg" alt="" />Debit &
+              <h5>Credit Card</h5>
+            
+          </div>
+          <div class="options" id="wallet">
+            <img src="https://images.bewakoof.com/web/Group-1645705428.png" alt="" />
+            <h5>Wallet</h5>
+          </div>
+          <div class="options" id="upi">
+            <img src="https://images.bewakoof.com/web/upi-icon-1645705429.png" alt=""> 
+            <h5>UPI</h5>
+          </div>
+          <div class="options" id="netbanking">
+            <img src="https://images.bewakoof.com/web/nb-icon-1645705428.png" alt=""> 
+            <h5>Net banking</h5>
+          </div>
+          <div class="options" id="cashondelivery">
+            <img src="https://images.bewakoof.com/web/cod-icon-1645705427.png" alt="">
+            <h5>Cash On Delivery</h5>
+          </div>
+          
+        </div>
+        <div id="detailside">
+          <div id="detailsideheader">
+            <img src="https://images.bewakoof.com/web/ic-visa-gray-payment-v1.jpg" alt="">
+            <img src="https://images.bewakoof.com/web/ic-master-card-payment-v1.jpg" alt="">
+            <img src="https://images.bewakoof.com/web/ic-rupay-payment-v1.jpg" alt="">
+            <img src="https://images.bewakoof.com/web/ic-american-express-payment-v1.jpg" alt="">
+          </div>
+          <br>
+          <div id="detailsform">
+            <form action="" method="get">
+              <input type="number" name="cardnumber" maxlength="5" id="cardnumber" placeholder="Card Number">
+              
+              
+                <input type="month" name="expirydate"  id="expirydate">
+                <input type="number" name="CVV" id="CVV" placeholder="CVV">
+                <img src="https://images.bewakoof.com/web/tooltip-card-1645727877.svg" alt="">
+                <input type="text" name="Nameoncard" id="nameoncard" placeholder="Name on Card">
+                <br>
+                <span>
+                <input type="checkbox" name="check" id="check">Save card details for later
+                <br>
+                <p>This transaction you make is totally secure. We don't save your CVV number</p>
+                <input type="submit" value="Pay" id="submit">
+                
+                
+              
+            
+                
+
+              
+              
+            </form>
+          </div>
+
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>
+</html>

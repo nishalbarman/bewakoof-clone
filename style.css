@@ -1,0 +1,89 @@
+body {
+  font-family: "Roboto slab", sans-serif;
+}
+
+#payment {
+  width: 60%;
+  height: max-content;
+  /* background-color: burlywood; */
+  margin-left: 50px;
+}
+#logo {
+  margin-left: 50px;
+}
+#method {
+  width: 95%;
+  height: 450px;
+  /* background-color: red; */
+  border: 0.5px solid grey;
+
+  display: flex;
+}
+.options {
+  width: 100%;
+  height: 80px;
+  border: 1px solid rgb(82, 82, 82);
+  border-right: none;
+  /* background-color: brown; */
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+img {
+  height: 24px;
+  padding: 20px;
+}
+#optionside {
+  width: 40%;
+}
+#detailside {
+  width: 70%;
+  height: 100%;
+  /* background-color: blue; */
+  border: 0.5px solid gray;
+}
+#cardnumber {
+  width: 80%;
+
+  margin-left: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#expirydate {
+  padding: 8px 8px;
+  margin: 5px 50px;
+}
+h6 {
+  margin-left: 50px;
+}
+
+#CVV {
+  width: 20%;
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#nameoncard {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#check {
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+#detailsform {
+  
+  display: flex;
+  margin-left: 50px;
+}
+#submit{
+  width: 90%;
+  height: 30px;
+}
