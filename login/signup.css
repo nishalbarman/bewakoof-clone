@@ -47,14 +47,42 @@ main{
     width: 50%;
     left: 50%;
     top: 0;
+    border: solid 2px black;
+}
+.form_box{
+    width:70%;
+    height: 60%;
+    border: solid 2px black;
+    margin: auto;
+    margin-top: 25%;
     text-align: center;
 }
 #signUpContainer{
     display: grid;
     width: 30%;
     text-align: center;
-    
-
+}
+#signUpContainer>button{
+    width: 500px; 
+    padding: 12px; 
+    margin-top: 10px; 
+    background-color: #42a2a2; 
+    color: white;
+    justify-content: center;
+    margin-left: 50px;
+}
+#signUpContainer>input{
+    width: 500px; 
+    padding: 12px; 
+    margin-top: 10px; 
+    justify-content: center;
+    margin-left: 50px;
+}
+h1{
+    margin-bottom: 20px;
+}
+p{
+    margin-bottom: 50px;
 }
 .flex{
     display: flex;
