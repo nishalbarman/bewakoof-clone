@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    /* min-height: 100vh; */
+    overflow: hidden;
+    background-color: #fff4c4;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    height: 900px;
+    background-color: white;
+    padding-top: 0;
+}
+.inner-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border: solid black; */
+    
+}
+.image-wrap{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+}
+.image-wrap>img{
+    width: 100%;
+    height: 100%;
+}
+.forms-wrap{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    text-align: center;
+}
+#signUpContainer{
+    display: grid;
+    width: 30%;
+    text-align: center;
+    
+
+}
+.flex{
+    display: flex;
+}
+
+/* nav start */
+.first-nav {
+    margin: 0;
+    width: 100%;
+    height: 20px;
+    /* position: fixed; */
+    font-size: 11px;
+    background-color: #eee;
+    font-weight: 400;
+    justify-content: space-around;
+    
+}
+
+.left-first-nav>p , .left-middle-nav>p{
+    margin: auto;
+    margin-left: 20px;
+}
+.right-first-nav>p , .right-middle-nav>p{
+    margin: auto;
+    margin-left: 20px;
+}
+.pointer:hover{
+    cursor: pointer;
+}
+.middle-nav{
+    justify-content: space-around;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 13px;
+}
+.middle-nav img{
+    height: 50;
+}
+.middle-nav{
+    /* position: relative; */
+    height: 50px;
+}
+/* nav end */
