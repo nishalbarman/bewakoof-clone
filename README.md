@@ -10,13 +10,12 @@ Cart is an option for users to store their liked product in a bucket, just like 
   imgurl:
     "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
   title: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
-  originalPrice: 1000,
+  original pricee: 1000,
   discountPrice: 500,
   size: "S",
   quantity: 1,
 };`
 
-#Local Storage Key's
-    Total price = *bewakoof-cart-total-price*
-    Which can be accessed by ```localStorage.getItem("bewakoof-cart-total-price");```
-````
+# Local Storage Key's
+    * Total price =  'bewakoof-cart-total-price'
+      Which can be accessed by `localStorage.getItem("bewakoof-cart-total-price");`
