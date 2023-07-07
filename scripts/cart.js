@@ -12,8 +12,8 @@ var data = [
     image_url:
       "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
     name: "Men's Black T-shirt",
-    price: "999",
-    strikeoffPrice: "399",
+    strikeoffPrice: "999",
+    price: "399",
     size: "S",
     quantity: 2,
   },
@@ -85,7 +85,7 @@ function displayThings(arr) {
       divUpper.setAttribute("class", "upper");
       btnQuanSize.setAttribute("class", "qp");
 
-      var quantity = element.quantity;
+      var quantity = +element.quantity;
       var original = +element.strikeoffPrice;
       var discount = +element.price;
 
@@ -93,7 +93,7 @@ function displayThings(arr) {
       var dis = quantity * discount;
       var bagdiscount = price - dis;
 
-      originalPrice += original;
+      originalPrice += price;
       bagDiscount += bagdiscount;
       subtotal += dis;
       totalprice += dis;
@@ -210,7 +210,9 @@ function offerApply(status) {
 
     var dis = (totalprice * 30) / 100;
 
+    console.log(dis);
     bagDiscount += dis;
+    console.log(bagDiscount);
     subtotal -= dis;
     totalprice -= dis;
 

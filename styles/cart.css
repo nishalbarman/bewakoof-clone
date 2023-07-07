@@ -196,7 +196,7 @@ body > div:nth-of-type(2) > div {
   display: flex;
   width: 100%;
   text-align: center;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
   border-top: 2px solid rgba(0, 0, 0, 0.04);
   margin: 0px 10px;
   font-size: 12px;
