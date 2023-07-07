@@ -22,13 +22,13 @@ form_l.addEventListener("submit",function(){
             if(ele.password == password_l.value)
             {
                 alert("login sucessfull");
-                // window.location.href="index.html";
+                window.location.assign=("./index.html");
             }
             else{
                 alert("wrong credentials")
             }
         }
-        })
+        });
 
     }   
 })
