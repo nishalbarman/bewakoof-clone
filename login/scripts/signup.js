@@ -21,6 +21,9 @@ else{
 }
 
 });
+while(num_arr.length>0){
+  num_arr.pop();
+}
 
 function func(){
   var login=document.querySelector(".log");
