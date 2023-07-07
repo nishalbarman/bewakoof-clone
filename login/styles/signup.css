@@ -165,16 +165,23 @@ main{
   height: 65%;
   /* border: solid 2px black; */
   margin: auto;
-  margin-top: 25%;
+  margin-top: 15%;
   text-align: center;
 }
 #signUpContainer>input,#signUpContainer>button{
   display: grid;
   width: 85%;
-  padding: 15px;
+  padding: 20px;
   margin: auto;
   margin-bottom: 15px;
   cursor: pointer;
+}
+#signUpContainer>button{
+  color: white;
+  background-color: #42a2a2;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
 }
 .log{
   margin-bottom: 12px;
@@ -195,4 +202,15 @@ h1{
 }
 p{
   margin: 30px;
+}
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-right: 10px;
+}
+.fa-facebook{
+  margin-right: 10px;
 }
