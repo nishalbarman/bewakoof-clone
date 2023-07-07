@@ -14,7 +14,12 @@ si_arr.push({
   email:email,
   password:password,
 });
-
 localStorage.setItem("userinfo",JSON.stringify(si_arr));
-
+if(name=="" || email=="" || password=="")
+{
+  alert("Please Enter the Information");
+}
+else{
+  alert("Sign up successful")
+}
 });

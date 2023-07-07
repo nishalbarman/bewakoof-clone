@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>sign up form</title>
     <link rel="stylesheet" href="./mainsignup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- NavBar Starts Here -->
@@ -23,27 +26,22 @@
 
     </div>
 
-    <div class="middle-nav flex">
-        <div class="left-middle-nav flex">
-
-            <img class="pointer" style="width: 40%; height: 40%; margin: auto;" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg"
-                alt="Bewakoof logo">
-            <p class="pointer">MEN</p>
-            <p class="pointer">WOMEN</p>
-            <P class="pointer">MOBILE COVERS</P>
-
+    <div class="navbar-middle">
+        <div class="first-half">
+            <img class="logo" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="logo" />
+            <p>Men</p>
+            <p>Women</p>
+            <p>Mobile Covers</p>
         </div>
-
-        <div class="right-middle-nav flex">
-            <input type="text" placeholder="Search by product, category or collection" autocomplete="off" style="height: 60%; margin: auto; background-color: #eaeaea;">
-            <i class="fa-solid fa-heart"></i>
+        <div class="right-half">
+            <input type="text" autocomplete="off" placeholder="Search by product, category or collection" />
+            <span class="bar"></span>
+            <i class="fa-regular fa-heart fa-xl custom" style="margin-right: 15px;"></i>
+            <i class="fa-solid fa-bag-shopping fa-xl custom"></i>
         </div>
     </div>
-
-        <hr>
-    
-    <!-- NavBar Completed -->
-    
+    <!-- nav bar complete -->
+    <main>
         <div class="box">
             <div class="childbox">
                 <h1>SignUp</h1>
@@ -51,11 +49,14 @@
                     <input placeholder="fullname" id="fullname" type="text">
                     <input placeholder="email" id="email" type="email">
                     <input placeholder="password" id="password" type="password">
-                    <input id="Submit" type="submit">
+                    <input id="Submit" type="submit" value="Sign Up">
                 </form>
                
             </div>
         </div>
+
+    </main>
+        
         
 </body>
 <script src="./mainsignup.js"></script>

@@ -5,56 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./login.css">
+    <!-- font awesome styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-     <!-- NavBar Starts Here -->
-     <div class=" first-nav flex">
-        <div class="left-first-nav flex">
-            <p class="pointer">Offers</p>
-            <p class="pointer"> Facebook</p>
-            <p class="pointer">Download App</p>
-            <p class="pointer">TriBe Membership</p>
-        </div>
-
-        <div class="right-first-nav flex">
-            <p class="pointer">Contact Us</p>
-            <p class="pointer">Track Order</p>
-        </div>
-
+   <!-- NavBar Starts Here -->
+   <div class=" first-nav flex">
+    <div class="left-first-nav flex">
+        <p class="pointer">Offers</p>
+        <p class="pointer"> Facebook</p>
+        <p class="pointer">Download App</p>
+        <p class="pointer">TriBe Membership</p>
     </div>
 
-    <div class="middle-nav flex">
-        <div class="left-middle-nav flex">
+    <div class="right-first-nav flex">
+        <p class="pointer">Contact Us</p>
+        <p class="pointer">Track Order</p>
+    </div>
 
-            <img class="pointer" style="width: 40%; height: 40%; margin: auto;" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg"
-                alt="Bewakoof logo">
-            <p class="pointer">MEN</p>
-            <p class="pointer">WOMEN</p>
-            <P class="pointer">MOBILE COVERS</P>
+</div>
 
-        </div>
-
-        <div class="right-middle-nav flex">
-            <input type="text" placeholder="Search by product, category or collection" autocomplete="off" style="height: 60%; margin: auto; background-color: #eaeaea;">
-            <i class="fa-solid fa-heart"></i>
+<div class="navbar-middle">
+    <div class="first-half">
+        <img class="logo" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="logo" />
+        <p>Men</p>
+        <p>Women</p>
+        <p>Mobile Covers</p>
+    </div>
+    <div class="right-half">
+        <input type="text" autocomplete="off" placeholder="Search by product, category or collection" />
+        <span class="bar"></span>
+        <i class="fa-regular fa-heart fa-xl custom" style="margin-right: 15px;"></i>
+        <i class="fa-solid fa-bag-shopping fa-xl custom"></i>
+    </div>
+</div>
+<!-- nav bar complete -->
+<main>
+    <div class="box">
+        <div class="childbox">
+            <h1>Log in to your account</h1>
+            <form id="loginForm">
+                <input placeholder="Email" id="email" type="email">
+                <input placeholder="Password" id="password" type="password">
+                <input id="Submit"  type="submit" value="LOGIN">
+            
+            </form>
+            
         </div>
     </div>
 
-        <hr>
+</main>
     
-    <!-- NavBar Completed -->
-    
-        <div class="box">
-            <div class="childbox">
-                <h1>Log in to your account</h1>
-                <form id="loginForm">
-                    <input placeholder="email" id="email" type="email">
-                    <input placeholder="password" id="password" type="password">
-                    <input id="Submit"  type="submit">
-                </form>
-               
-            </div>
-        </div>
 </body>
 <script src="./login.js"></script>
 </html>

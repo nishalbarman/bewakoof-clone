@@ -25,5 +25,4 @@ form_l.addEventListener("submit",function(){
     }
     })
     
-
 })

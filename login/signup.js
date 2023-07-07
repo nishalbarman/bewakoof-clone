@@ -14,7 +14,7 @@ localStorage.setItem("usernumber",JSON.stringify(num_arr));
 console.log(phone);
 if(phone=="")
 {
-  alert("enter number");
+  alert("Please Enter the number");
 }
 else{
   window.location.assign("mainsignup.html")
@@ -28,3 +28,5 @@ function func(){
   window.location.assign("login.html");
 
 }
+
+
