@@ -1,28 +1,27 @@
-// var data = [
-//   {
-//     image_url:
-//       "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
-//     name:
-//       "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
-//     originalPrice: 1000,
-//     discountPrice: 500,
-//     size: "S",
-//     quantity: 1,
-//   },
-//   {
-//     imgurl:
-//       "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
-//     title: "Men's Black T-shirt",
-//     originalPrice: 999,
-//     discountPrice: 399,
-//     size: "S",
-//     quantity: 2,
-//   },
-// ];
+var data = [
+  {
+    image_url:
+      "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
+    name: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
+    strikeoffPrice: "1000",
+    price: "500",
+    size: "S",
+    quantity: 1,
+  },
+  {
+    image_url:
+      "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
+    name: "Men's Black T-shirt",
+    price: "999",
+    strikeoffPrice: "399",
+    size: "S",
+    quantity: 2,
+  },
+];
 
 // localStorage.setItem("bewakoof-cart-items", JSON.stringify(data));
 
-var cartItems = JSON.parse(localStorage.getItem("cart_product")) || [];
+var cartItems = JSON.parse(localStorage.getItem("cart_product")) || data;
 // var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
 var totalItems = document.querySelector("#total-items");
@@ -219,6 +218,7 @@ function offerApply(status) {
     bagdiscountElement.innerText = `- ₹${Math.floor(bagDiscount)}`;
     subtotalElement.innerText = `₹${Math.floor(subtotal)}`;
     localStorage.setItem("bewakoof-cart-total-price", totalprice);
+    couponNotification();
   }
 }
 
@@ -298,4 +298,62 @@ function dissmisQtyModal() {
 
 function homePage() {
   document.location = "./index.html";
+}
+
+function couponNotification() {
+  var appendTo = document.getElementById("couponApplied");
+  appendTo.innerHTML = "";
+  var coupon_card = document.createElement("div");
+
+  var coupon_title_flex = document.createElement("div");
+
+  var title_coupon_check = document.createElement("div");
+
+  var image = document.createElement("img");
+
+  var coupon_title = document.createElement("p");
+
+  var coupon_code = document.createElement("span");
+
+  var removeBtn = document.createElement("span");
+
+  var notification = document.createElement("p");
+
+  coupon_card.classList.add("coupon_card");
+  coupon_title_flex.classList.add("cpn_title_flex");
+  title_coupon_check.classList.add("title_coupon_check");
+
+  image.setAttribute(
+    "src",
+    "https://images.bewakoof.com/web/teenyicons-tick-circle-solid-1614248395.png"
+  );
+  image.setAttribute("alt", "coupon_applied");
+
+  coupon_title.textContent = "Coupon Applied ";
+  coupon_title.setAttribute("id", "cpn_title");
+  coupon_code.textContent = "MASAI20";
+  coupon_code.classList.add("coupon_code");
+  removeBtn.innerText = "REMOVE";
+  removeBtn.setAttribute("id", "removeBtn");
+
+  removeBtn.addEventListener("click", function () {
+    event.target.parentNode.parentNode.remove();
+    localStorage.removeItem("offer-applied");
+    originalPrice = 0;
+    bagDiscount = 0;
+    subtotal = 0;
+    totalprice = 0;
+    displayThings(cartItems);
+  });
+
+  notification.textContent =
+    "Discount of 20% has been added to your cart enjoy your shoping.";
+
+  coupon_title.append(coupon_code);
+
+  title_coupon_check.append(image, coupon_title);
+
+  coupon_title_flex.append(title_coupon_check, removeBtn);
+  coupon_card.append(coupon_title_flex, notification);
+  appendTo.append(coupon_card);
 }
