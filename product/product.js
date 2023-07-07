@@ -5,16 +5,18 @@ var mensData = [
         name : "Marvel X Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic...",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON",
-        a:"http://127.0.0.1:5500/fancy-thunder-426/product/details/product_1.html",
+        a:"./details/product_1.html",
     },
     {
         image_url : "https://images.bewakoof.com/t640/men-s-black-thunder-breathing-1st-form-graphic-printed-oversized-t-shirt-599563-1687766143-1.jpg",
         name : "Marvel X Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic..",
         price : "₹649",
+        sort : 699,
         strikeoffPrice : "₹1299",
         button : "₹599 for Tribe Members",
         button1 : "100% COTTON",
@@ -25,6 +27,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic..",
         price : "₹599",
+        sort : 599,
         strikeoffPrice : "₹1299",
         button : "₹549 for Tribe Members",
         button1 : "100% COTTON",
@@ -35,15 +38,18 @@ var mensData = [
         name : "Disney X Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic..",
         price : "₹649",
+        sort : 649,
         strikeoffPrice : "₹1299",
         button : "₹599 for Tribe Members",
-        button1 : "100% COTTON"
+        button1 : "100% COTTON",
+        a:"./details/product_2.html",
     },
     {
         image_url : "https://images.bewakoof.com/t640/men-s-grey-skater-donald-graphic-printed-oversized-t-shirt-602558-1688380650-1.jpg",
         name : "Disney X Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic..",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -53,6 +59,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic...",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -62,6 +69,7 @@ var mensData = [
         name : "Marvel X Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic..",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -71,6 +79,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹599",
+        sort : 599,
         strikeoffPrice : "₹1299",
         button : "₹549 for Tribe Members",
         button1 : "100% COTTON"
@@ -80,6 +89,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹599",
+        sort : 599,
         strikeoffPrice : "₹1299",
         button : "₹549 for Tribe Members",
         button1 : "100% COTTON"
@@ -89,6 +99,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1499",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -98,6 +109,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -107,6 +119,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹699",
+        sort : 699,
         strikeoffPrice : "₹1299",
         button : "₹639 for Tribe Members",
         button1 : "100% COTTON"
@@ -116,6 +129,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹799",
+        sort : 799,
         strikeoffPrice : "₹1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -125,6 +139,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹999",
+        sort : 999,
         strikeoffPrice : "₹1999",
         button : "₹919 for Tribe Members",
         button1 : "100% COTTON"
@@ -134,6 +149,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹699",
+        sort : 699,
         strikeoffPrice : "₹1699",
         button : "₹599 for Tribe Members",
         button1 : "100% COTTON"
@@ -143,6 +159,7 @@ var mensData = [
         name : "Marvel X Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹ 799",
+        sort : 799,
         strikeoffPrice : "₹ 1699",
         button : "₹739 for Tribe Members",
         button1 : "100% COTTON"
@@ -152,6 +169,7 @@ var mensData = [
         name : "Offical Dc Bewakoof Merchandise",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹699",
+        sort : 699,
         strikeoffPrice : "₹1299",
         button : "₹639 for Tribe Members",
         button1 : "100% COTTON"
@@ -161,6 +179,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹699",
+        sort : 699,
         strikeoffPrice : "₹1299",
         button : "₹639 for Tribe Members",
         button1 : "100% COTTON"
@@ -170,6 +189,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹699",
+        sort : 699,
         strikeoffPrice : "₹1299",
         button : "₹639 for Tribe Members",
         button1 : "100% COTTON"
@@ -179,6 +199,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹499",
+        sort : 499,
         strikeoffPrice : "₹1099",
         button : "₹409 for Tribe Members",
         button1 : "100% COTTON"
@@ -188,6 +209,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹499",
+        sort : 499,
         strikeoffPrice : "₹409",
         button : "₹409 for Tribe Members",
         button1 : "100% COTTON"
@@ -197,6 +219,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹499",
+        sort : 499,
         strikeoffPrice : "₹1299",
         button : "₹439 for Tribe Members",
         button1 : "100% COTTON"
@@ -206,6 +229,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹499",
+        sort : 499,
         strikeoffPrice : "₹1299",
         button : "₹439 for Tribe Members",
         button1 : "100% COTTON"
@@ -215,6 +239,7 @@ var mensData = [
         name : "Bewakoof®",
         ptag : "Men's Black Across The Spiderverse Graphic",
         price : "₹499",
+        sort : 429,
         strikeoffPrice : "₹1299",
         button : "₹439 for Tribe Members",
         button1 : "100% COTTON"
@@ -224,9 +249,9 @@ var mensData = [
 
 // var Men = JSON.parse(localStorage.getItem("productMen")) || []
 
-displayMen(mensData);
+displayMen(mensData); 
 
-function displayMen(Men) {
+function displayMen(mensData) {
   mensData.map(function (ele, ind) {
     var div = document.createElement("div");
 
@@ -242,7 +267,6 @@ function displayMen(Men) {
 
     var name = document.createElement("h3");
     name.textContent = ele.name;
-    console.log(ele.name);
 
     var ptag = document.createElement("p");
     ptag.textContent = ele.ptag;
@@ -275,3 +299,26 @@ function displayMen(Men) {
     document.querySelector("#products").append(div);
   });
 }
+
+document.querySelector(".filtePrice").addEventListener("change", filter);
+
+function filter() {
+    var filterVal = document.querySelector(".filtePrice").value;
+    console.log(filterVal);
+
+    if (filterVal === "htl") {
+        mensData.sort(function (a, b) {
+            return b.sort - a.sort;
+        });
+        displayMen(mensData);
+    }
+    if (filterVal === "lth") {
+        mensData.sort(function (a, b) {
+            return a.sort - b.sort;
+        });
+        displayMen(mensData);
+    }
+}
+
+
+
