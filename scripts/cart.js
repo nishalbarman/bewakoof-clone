@@ -1,29 +1,29 @@
-var data = [
-  {
-    imgurl:
-      "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
-    title:
-      "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
-    originalPrice: 1000,
-    discountPrice: 500,
-    size: "S",
-    quantity: 1,
-  },
-  {
-    imgurl:
-      "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
-    title: "Men's Black T-shirt",
-    originalPrice: 999,
-    discountPrice: 399,
-    size: "S",
-    quantity: 2,
-  },
-];
+// var data = [
+//   {
+//     image_url:
+//       "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
+//     name:
+//       "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
+//     originalPrice: 1000,
+//     discountPrice: 500,
+//     size: "S",
+//     quantity: 1,
+//   },
+//   {
+//     imgurl:
+//       "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
+//     title: "Men's Black T-shirt",
+//     originalPrice: 999,
+//     discountPrice: 399,
+//     size: "S",
+//     quantity: 2,
+//   },
+// ];
 
 // localStorage.setItem("bewakoof-cart-items", JSON.stringify(data));
 
-var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || [];
-var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
+var cartItems = JSON.parse(localStorage.getItem("cart_product")) || [];
+// var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
 var totalItems = document.querySelector("#total-items");
 if (cartItems.length == 1) {
@@ -87,8 +87,8 @@ function displayThings(arr) {
       btnQuanSize.setAttribute("class", "qp");
 
       var quantity = element.quantity;
-      var original = element.originalPrice;
-      var discount = element.discountPrice;
+      var original = +element.strikeoffPrice;
+      var discount = +element.price;
 
       var price = quantity * original;
       var dis = quantity * discount;
@@ -106,15 +106,15 @@ function displayThings(arr) {
       bagdiscountElement.innerText = `- ₹${bagDiscount}`; // bag discount
       subtotalElement.innerText = `₹${subtotal}`; // subtotal
 
-      title.textContent = element.title;
+      title.textContent = element.name;
       prices.innerHTML = `<span>₹${dis}</span> <span>₹${price}</span>`;
       priceSaved.innerHTML = `You saved <span>₹${bagdiscount}</span>!`;
       sizeButton.setAttribute("id", "sizeButton");
       sizeButton.innerHTML = `<span>Size :</span> <b> <span id="size">${element.size}</span> </b> <i className="fa-solid fa-angle-down" />`;
       qtyButton.setAttribute("id", "qtyButton");
       qtyButton.innerHTML = `<span>Qty :</span> <b> <span id="qty">${element.quantity}</span> </b> <i className="fa-solid fa-angle-down" />`;
-      productImg.setAttribute("src", element.imgurl);
-      productImg.setAttribute("alt", element.title);
+      productImg.setAttribute("src", element.image_url);
+      productImg.setAttribute("alt", element.name);
       removeButton.textContent = "Remove";
       wishListButton.textContent = "Move to Wishlist";
       bottomSection.setAttribute("class", "bottom_section");
