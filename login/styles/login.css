@@ -154,6 +154,7 @@
   border-bottom: 2px solid #e4f0f6;
   transition: 500ms ease all; 
   cursor: pointer;
+  padding-left: 20px;
 }
 .childbox>#loginForm>#Submit{
   width: 100%;
