@@ -1,15 +1,3 @@
-const imageContainer = document.querySelector(".image-container");
-const scrollArrows = document.querySelectorAll(".scroll-arrow");
-
-function scrollImages(direction) {
-  imageContainer.scrollBy({
-    left: direction * (537.14 + 20),
-    behavior: "smooth",
-  });
-}
-
-// ///////////////// No. of products in the cart
-
 var noOfProduct = document.querySelector(".cart_product");
 
 var cart = JSON.parse(localStorage.getItem("cart_product")) || [];
@@ -34,6 +22,13 @@ search.addEventListener("click", function () {
   search.style.border = "1px solid rgba(0,0,0,0.5)";
   search_input.style.fontSize = "15px";
 });
+
+document
+  .querySelector("img[alt='bewakoof_logo']")
+  .addEventListener("click", function () {
+    console.log("index");
+    window.location.assign("/index.html");
+  });
 
 document.querySelector("#cart_clicked").addEventListener("click", function () {
   window.location.assign("./cart.html");
