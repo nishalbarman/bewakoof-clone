@@ -21,7 +21,7 @@ var data = [
 
 // localStorage.setItem("bewakoof-cart-items", JSON.stringify(data));
 
-var cartItems = JSON.parse(localStorage.getItem("cart_product")) || data;
+var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || data;
 // var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
 var totalItems = document.querySelector("#total-items");
@@ -175,7 +175,7 @@ function displayThings(arr) {
 
 var checkoutBtn = document.getElementById("continuePayment");
 checkoutBtn.addEventListener("click", function () {
-  document.location = "./payment.html/cart-checkout";
+  document.location = "./payment.html";
 });
 
 var couponForm = document.getElementById("coupon-form");
@@ -195,6 +195,7 @@ couponForm.addEventListener("submit", function (event) {
       } else {
         offerApply("true");
         dissmissCouponModal();
+        showCouponAppliedModal();
       }
     } else {
       var erroBox = document.getElementById("error_coupon_holder");
@@ -267,6 +268,12 @@ function showQtyModal(index) {
   });
 }
 
+function showCouponAppliedModal() {
+  var modal = document.getElementById("coupon_thank_you");
+  modal.style.display = "block";
+  setInterval(dissmissCouponAppliedModal, 720);
+}
+
 // all the modals here
 
 // When the user clicks anywhere outside of the modal, close it
@@ -274,17 +281,26 @@ window.onclick = function (event) {
   var modal = document.getElementById("coupon_modal");
   var sizemodal = document.getElementById("size_modal");
   var qty_modal = document.getElementById("qty_modal");
+  var couponThankModal = document.getElementById("coupon_thank_you");
+
   if (event.target == modal) {
     modal.style.display = "none";
   } else if (event.target == sizemodal) {
     sizemodal.style.display = "none";
   } else if (event.target == qty_modal) {
     qty_modal.style.display = "none";
+  } else if (event.target == couponThankModal) {
+    couponThankModal.style.display = "none";
   }
 };
 
 function dissmissCouponModal() {
   var modal = document.getElementById("coupon_modal");
+  modal.style.display = "none";
+}
+
+function dissmissCouponAppliedModal() {
+  var modal = document.getElementById("coupon_thank_you");
   modal.style.display = "none";
 }
 
