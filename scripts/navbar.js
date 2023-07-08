@@ -33,3 +33,7 @@ document
 document.querySelector("#cart_clicked").addEventListener("click", function () {
   window.location.assign("./cart.html");
 });
+
+document.getElementById("login").addEventListener("click", function () {
+  window.location.assign("./signup.html");
+});
