@@ -327,6 +327,10 @@ document.querySelector("#Price").addEventListener("change", function () {
   var filterVal = event.target.value;
   console.log(filterVal);
 
+  if (filterVal === "") {
+    displayMen(mensData);
+  }
+
   if (filterVal === "htl") {
     var newArr = [...mensData];
     newArr.sort(function (a, b) {
