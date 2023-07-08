@@ -715,6 +715,15 @@
         function addtoBag() {
             alert("Product Added to Cart!")
             localStorage.setItem("cart_product", JSON.stringify(objArr))
+            var noOfProduct = document.querySelector(".cart_product");
+
+            var cart = JSON.parse(localStorage.getItem("cart_product")) || [];
+
+            noOfProduct.innerText = cart.length;
+
+            if (noOfProduct.textContent == 0) {
+                noOfProduct.hidden = true;
+            }
         }
 
         // document.querySelector("#cart_clicked").addEventListener("click", function () {
