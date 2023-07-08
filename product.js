@@ -21,7 +21,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹599 for Tribe Members",
     button1: "100% COTTON",
-    a: ".details/product_2.html",
+    a: "./details/product_2.html",
   },
   {
     image_url:
