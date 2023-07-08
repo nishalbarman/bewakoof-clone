@@ -9,12 +9,15 @@ https://snazzy-bublanina-52c88a.netlify.app/index.html
 
 # Authors
 Vipul Girhe
+https://github.com/heyvipul
 
 Nishal Barman
+https://github.com/nishalbarman
 
 Chetan Patil
+https://github.com/Chetn11
 
 Sushil Sharma
+https://github.com/Sushil1603
 
-Fredick Topono
 
