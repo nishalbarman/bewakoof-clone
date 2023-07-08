@@ -108,6 +108,13 @@
     margin: 0px 10px;
     cursor: pointer;
   }
+  #footer1{
+    /* width: 100px; */
+    margin-top: 3900px;
+  }
+  #footer2{
+    margin-top: -10px;
+  }
 /* my part form here  */
 
 #heading{
