@@ -1,27 +1,27 @@
-var data = [
-  {
-    image_url:
-      "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
-    name: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
-    strikeoffPrice: "1000",
-    price: "500",
-    size: "S",
-    quantity: 1,
-  },
-  {
-    image_url:
-      "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
-    name: "Men's Black T-shirt",
-    strikeoffPrice: "999",
-    price: "399",
-    size: "S",
-    quantity: 2,
-  },
-];
+// var data = [
+//   {
+//     image_url:
+//       "https://images.bewakoof.com/t320/men-s-black-across-the-spiderverse-graphic-printed-oversized-t-shirt-599566-1687765259-1.jpg",
+//     name: "Men's Black Across The Spiderverse Graphic Printed Oversized T-shirt",
+//     strikeoffPrice: "1000",
+//     price: "500",
+//     size: "S",
+//     quantity: 1,
+//   },
+//   {
+//     image_url:
+//       "https://images.bewakoof.com/t1080/men-s-black-t-shirt-106-1665669012-1.jpg",
+//     name: "Men's Black T-shirt",
+//     strikeoffPrice: "999",
+//     price: "399",
+//     size: "S",
+//     quantity: 2,
+//   },
+// ];
 
 // localStorage.setItem("bewakoof-cart-items", JSON.stringify(data));
 
-var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || data;
+var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || [];
 // var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
 var totalItems = document.querySelector("#total-items");
@@ -271,7 +271,7 @@ function showQtyModal(index) {
 function showCouponAppliedModal() {
   var modal = document.getElementById("coupon_thank_you");
   modal.style.display = "block";
-  setInterval(dissmissCouponAppliedModal, 720);
+  setInterval(dissmissCouponAppliedModal, 750);
 }
 
 // all the modals here
