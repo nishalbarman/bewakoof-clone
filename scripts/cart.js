@@ -19,9 +19,9 @@
 //   },
 // ];
 
-// localStorage.setItem("bewakoof-cart-items", JSON.stringify(data));
+// localStorage.setItem("cart_product", JSON.stringify(data));
 
-var cartItems = JSON.parse(localStorage.getItem("bewakoof-cart-items")) || [];
+var cartItems = JSON.parse(localStorage.getItem("cart_product")) || [];
 // var couponCodes = JSON.parse(localStorage.getItem("bewakoof-cart-coupons"));
 
 var totalItems = document.querySelector("#total-items");
@@ -85,9 +85,9 @@ function displayThings(arr) {
       divUpper.setAttribute("class", "upper");
       btnQuanSize.setAttribute("class", "qp");
 
-      var quantity = +element.quantity;
-      var original = +element.strikeoffPrice;
-      var discount = +element.price;
+      var quantity = parseInt(element.quantity);
+      var original = parseInt(element.strikeoffPrice);
+      var discount = parseInt(element.price);
 
       var price = quantity * original;
       var dis = quantity * discount;
@@ -97,6 +97,8 @@ function displayThings(arr) {
       bagDiscount += bagdiscount;
       subtotal += dis;
       totalprice += dis;
+
+      console.log(originalPrice, bagDiscount, subtotal, totalprice);
 
       localStorage.setItem("bewakoof-cart-total-price", totalprice);
 
@@ -147,7 +149,7 @@ function displayThings(arr) {
         } else if (cartItems.length > 1) {
           totalItems.innerText = `${cartItems.length} item(s)`;
         }
-        localStorage.setItem("bewakoof-cart-items", JSON.stringify(cartItems));
+        localStorage.setItem("cart_product", JSON.stringify(cartItems));
 
         originalPrice = 0;
         bagDiscount = 0;
@@ -239,7 +241,7 @@ function showSizeModal(index) {
   allP.forEach(function (element) {
     element.addEventListener("click", function () {
       cartItems[index].size = element.innerText;
-      localStorage.setItem("bewakoof-cart-items", JSON.stringify(cartItems));
+      localStorage.setItem("cart_product", JSON.stringify(cartItems));
       originalPrice = 0;
       bagDiscount = 0;
       subtotal = 0;
@@ -257,7 +259,7 @@ function showQtyModal(index) {
   allP.forEach(function (element) {
     element.addEventListener("click", function () {
       cartItems[index].quantity = +element.innerText;
-      localStorage.setItem("bewakoof-cart-items", JSON.stringify(cartItems));
+      localStorage.setItem("cart_product", JSON.stringify(cartItems));
       originalPrice = 0;
       bagDiscount = 0;
       subtotal = 0;
