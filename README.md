@@ -9,8 +9,12 @@ https://snazzy-bublanina-52c88a.netlify.app/index.html
 
 # Authors
 Vipul Girhe
+
 Nishal Barman
+
 Chetan Patil
+
 Sushil Sharma
+
 Fredick Topono
 
