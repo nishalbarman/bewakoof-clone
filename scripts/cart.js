@@ -189,7 +189,8 @@ couponForm.addEventListener("submit", function (event) {
     erroBox.textContent = "Empty Field";
     erroBox.style.display = "block";
   } else {
-    if (code === "MASAI20") {
+    code = code.toLowerCase();
+    if (code == "masai20") {
       if (localStorage.getItem("offer-applied")) {
         var erroBox = document.getElementById("error_coupon_holder");
         erroBox.textContent = "Offer Already Applied";
