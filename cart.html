@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Fashion Shopping for Men, Women, Accessories - Bewakoof.com</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="https://images.bewakoof.com/web/favicon-1635856217.png">
+
+    <!-- font awesome styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- style file here -->
+    <link rel="stylesheet" href="./styles/cart.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <div>
+        <img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg" alt="bewakoof log"
+            onclick="homePage()">
+    </div>
+
+    <!-- main Cart Container -->
+    <div id="main_cart_container" style="display: none;">
+        <p><b>My Bag </b><span id="total-items">1 item</span></p>
+        <!-- Cart items, price and coupon section  -->
+        <div>
+            <!-- cart items container  -->
+            <div id="cart-item-container">
+                <div>
+                    <img src="https://images.bewakoof.com/web/Red-truck.png" alt="truck" class="truck">
+                    <p>Yay! You get FREE delivery on this order</p>
+                </div>
+                <div id="cart-append">
+
+                </div>
+            </div>
+
+            <!-- payments details and coupons -->
+            <div>
+                <div id="coupons_text">
+                    <div>
+                        <p>Whistles! Get extra 20% Cashback on any orders. Coupon code - MASAI20. Applicable for new/old
+                            customers!</p>
+                    </div>
+                </div>
+                <div class="apply_coupon_outer">
+                    <div class="apply_coupon" id="couponApply">
+                        <p>Apply Coupon / Gift Card / Referral</p>
+                        <p>Redeem! <img src="https://images.bewakoof.com/web/coupon-redeem-arrow-1634641878.png" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div id="couponApplied">
+
+                </div>
+                <div class="price_details">
+                    <div>
+                        <p>PRICE SUMMARY</p>
+                    </div>
+                    <div>
+                        <p>Total MRP (Incl. of taxes)</p>
+                        <p id="originalprice">₹2598</p>
+                    </div>
+                    <div>
+                        <p>Shipping Charges </p>
+                        <p id="shippingprice">FREE</p>
+                    </div>
+                    <div>
+                        <p>Bag Discount</p>
+                        <p id="bagdiscount">- ₹1300</p>
+                    </div>
+                    <div>
+                        <p>Subtotal </p>
+                        <p id="subtotal">₹1298</p>
+                    </div>
+                    <div class="price_bottom_section">
+                        <div>
+                            <p>Total</p>
+                            <p id="totalprice">₹ 1298</p>
+                        </div>
+                        <button id="continuePayment">Continue</button>
+                    </div>
+                    <div class="bottom_images">
+                        <div>
+                            <img src="https://images.bewakoof.com/web/cart-badge-trust.svg" alt="cart_100%_secure" />
+                            <p>100% SECURE PAYMENTS</p>
+                        </div>
+                        <div>
+                            <img src="https://images.bewakoof.com/web/cart-easy-return.svg" alt="quick_return" />
+                            <p>EASY RETURNS & QUICK REFUNDS</p>
+                        </div>
+                        <div>
+                            <img src="https://images.bewakoof.com/web/quality-check.svg" alt="quality_assurance" />
+                            <p>QUALITY ASSURANCE</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- empty cart display -->
+    <div id="emptydisplay" class="no-item">
+        <img src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png" alt="empty-bag" style="margin: auto;
+        width: 150px;" />
+        <p>Nothing in the bag</p>
+        <a id="continuetohome" href="/index.html">Continue Shopping</a>
+
+
+        <div class="category">
+            <p>You could try one of these categories:</p>
+            <div id="resp-table">
+                <div id="resp-table-body">
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Men
+                        </div>
+                        <div class="table-body-cell">
+                            Topwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bottomwear
+                        </div>
+                    </div>
+
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                        </div>
+                        <div class="table-body-cell">
+                            Footwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bestsellers
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Women
+                        </div>
+                        <div class="table-body-cell">
+                            Topwear
+                        </div>
+                        <div class="table-body-cell">
+                            Bottomwear
+                        </div>
+                    </div>
+
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+
+                        </div>
+                        <div class="table-body-cell">
+                            Bestsellers
+                        </div>
+                        <div class="table-body-cell">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="resp-table-row">
+                        <div class="table-body-cell">
+                            Mobile Covers
+                        </div>
+                        <div class="table-body-cell">
+                            All Mobile Covers
+                        </div>
+                        <div class="table-body-cell">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modals section  -->
+    <div id="coupon_modal">
+        <div class="coupon_model_container">
+            <p class="coupon_title_apply_box">Apply Coupon / Gift Card</p>
+            <form id="coupon-form">
+                <input type="text" id="cpn_code" placeholder="ENTER CODE" autocomplete="false" />
+                <div id="error_coupon_holder"><span id="error-text">Invalid
+                        Code</span></div>
+                <button type="submit" id="coupon_apply_button">APPLY</button>
+        </div>
+    </div>
+
+    <!-- size modal -->
+    <div id="size_modal">
+        <div class="size_model_container">
+            <p>Select Size</p>
+            <p id="S">S</p>
+            <p id="M">M</p>
+            <p id="L">L</p>
+            <p id="XL">XL</p>
+            <p id="2XL">2XL</p>
+            <p id="3XL">3XL</p>
+        </div>
+    </div>
+
+    <!-- quantity modal  -->
+    <div id="qty_modal">
+        <div class="qty_model_container">
+            <p>Select Quantity</p>
+            <p id="1">1</p>
+            <p id="2">2</p>
+            <p id="3">3</p>
+            <p id="4">4</p>
+            <p id="5">5</p>
+            <p id="6">6</p>
+            <p id="7">7</p>
+            <p id="8">8</p>
+            <p id="9">9</p>
+            <p id="10">10</p>
+        </div>
+    </div>
+
+    <!-- modals section  -->
+    <div id="coupon_thank_you">
+        <div class="coupon_model_thank_container">
+            <img src="./img/tick_mark.png" alt="couponTick" class="tickMarkCoupon" />
+            <p class="coupon_applied_msg">Coupon Successfully Applied</p>
+        </div>
+    </div>
+
+
+    <div style="height: 80px;">
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <footer style=" position: fixed;bottom: 0;width: 100%;">
+        <div style="margin-top: 0px; text-align: center; background: rgb(251, 251, 251);">
+            <img src="https://images.bewakoof.com/web/secure-payments-image.png" alt="some_payment_images"
+                style="max-width: 257px;width: 100%;margin: 10px auto;" />
+        </div>
+    </footer>
+
+    <!-- script file here -->
+    <script src="./scripts/cart.js"></script>
+
+</body>
+</html>
