@@ -21,7 +21,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹599 for Tribe Members",
     button1: "100% COTTON",
-    a: "http://127.0.0.1:5500/fancy-thunder-426/product/product_1.html",
+    a: ".details/product_2.html",
   },
   {
     image_url:
@@ -33,7 +33,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹549 for Tribe Members",
     button1: "100% COTTON",
-    a: "http://127.0.0.1:5500/fancy-thunder-426/product/product_1.html",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -57,6 +57,7 @@ var mensData = [
     strikeoffPrice: "₹1699",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -68,6 +69,7 @@ var mensData = [
     strikeoffPrice: "₹1699",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -79,6 +81,7 @@ var mensData = [
     strikeoffPrice: "₹1699",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -90,6 +93,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹549 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -101,6 +105,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹549 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -112,6 +117,7 @@ var mensData = [
     strikeoffPrice: "₹1499",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -123,6 +129,7 @@ var mensData = [
     strikeoffPrice: "₹1699",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -134,6 +141,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹639 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -145,6 +153,7 @@ var mensData = [
     strikeoffPrice: "₹1699",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -156,6 +165,7 @@ var mensData = [
     strikeoffPrice: "₹1999",
     button: "₹919 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -167,6 +177,7 @@ var mensData = [
     strikeoffPrice: "₹1699",
     button: "₹599 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -178,6 +189,7 @@ var mensData = [
     strikeoffPrice: "₹ 1699",
     button: "₹739 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -189,6 +201,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹639 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -200,6 +213,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹639 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -211,6 +225,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹639 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -222,6 +237,7 @@ var mensData = [
     strikeoffPrice: "₹1099",
     button: "₹409 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -233,6 +249,7 @@ var mensData = [
     strikeoffPrice: "₹409",
     button: "₹409 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -244,6 +261,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹439 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -255,6 +273,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹439 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
   {
     image_url:
@@ -266,6 +285,7 @@ var mensData = [
     strikeoffPrice: "₹1299",
     button: "₹439 for Tribe Members",
     button1: "100% COTTON",
+    a: "./details/product_1.html",
   },
 ];
 
