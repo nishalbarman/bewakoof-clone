@@ -9,20 +9,20 @@ in the cart page we can increase the quantity of the prfered product, we can rem
 
 ## https://snazzy-bublanina-52c88a.netlify.app/index.html
 
-### Team Members
+## Team Members
 
-Vipul Girhe
+### Vipul Girhe
 
-https://github.com/heyvipul
+### https://github.com/heyvipul
 
-Nishal Barman
+### Nishal Barman
 
-https://github.com/nishalbarman
+### https://github.com/nishalbarman
 
-Chetan Patil
+### Chetan Patil
 
-https://github.com/Chetn11
+### https://github.com/Chetn11
 
-Sushil Sharma
+### Sushil Sharma
 
-https://github.com/Sushil1603
+### https://github.com/Sushil1603
